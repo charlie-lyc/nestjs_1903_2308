@@ -8,7 +8,7 @@ import { DatabaseModule } from './database.module';
 import { itemsProviders } from './items/items.providers';
 
 @Module({
-  imports: [DatabaseModule, ItemsModule],
+  imports: [ItemsModule, DatabaseModule],
   controllers: [AppController, ItemsController],
   providers: [AppService, ItemsService, ...itemsProviders],
 })
